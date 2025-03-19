@@ -45,7 +45,7 @@ apt update & upgrade
 ##########################################"
 ~/tools/upgrade-ubuntu.sh
 
-echo "#################################################
+echo "##########################################
 ##########################################
 install net-tools & golang
 ##########################################
@@ -55,9 +55,7 @@ install net-tools & golang
 
 ./tools/language/install-golang.sh
 
-source ~/.bashrc
-
-echo "#################################################
+echo "##########################################
 ##########################################
 install containerd
 ##########################################
@@ -67,7 +65,7 @@ install containerd
 sudo chmod 777 /run/containerd/containerd.sock
 
 
-
+source ~/.bashrc
 
 
 
