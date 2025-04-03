@@ -1,5 +1,28 @@
 echo "boan ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/boan
 
+echo "####################################################
+##########################################
+cloning tools repo
+##########################################
+##########################################"
+git clone https://github.com/boanlab/tools
+
+
+echo "####################################################
+##########################################
+apt update & upgrade
+##########################################
+##########################################"
+~/tools/upgrade-ubuntu.sh
+
+echo "##########################################
+##########################################
+install net-tools & golang
+##########################################
+##########################################"
+
+./tools/install-net-tools.sh
+
 wget https://github.com/free5gc/gtp5g/archive/refs/tags/v0.8.10.tar.gz
 tar xvfz v0.8.10.tar.gz
 cd gtp5g-0.8.10/
@@ -71,3 +94,14 @@ sudo apt-mark hold kubelet kubeadm kubectl
 # enable br_netfilter
 sudo modprobe br_netfilter
 sudo bash -c 'echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables'
+
+echo "#custom alias
+alias ..='cd ..'
+alias k='kubectl'
+alias kp='kubectl get pod -A'
+alias wkp='watch -n 1 kubectl get pod -A'
+alias cl='clear'
+alias upgrade='~/tools/upgrade-ubuntu.sh'
+alias c='ctr'
+alias d='docker'
+alias i='istioctl'" >> ~/.bashrc
