@@ -105,3 +105,15 @@ alias upgrade='~/tools/upgrade-ubuntu.sh'
 alias c='ctr'
 alias d='docker'
 alias i='istioctl'" >> ~/.bashrc
+
+
+# install docker
+sudo apt-get install -y docker-ce
+
+# add user to docker group
+sudo usermod -aG docker $USER
+
+# bypass to run docker command
+sudo chmod 666 /var/run/docker.sock
+
+docker version
