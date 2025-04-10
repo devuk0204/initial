@@ -23,23 +23,23 @@ IF INIT == TRUE
 
 
 ## custom alias list
-..='cd ..'
-cl='clear'
-upgrade='sudo apt-get update && sudo apt-get uprade -y'
-k='kubectl'
-kp='kubectl get pod -n'
-kpa='kubectl get pod -A'
-kpo='kubectl get pod -A -o wide'
-wkp='watch -n 1 kubectl get pod -A'
-wkpo='watch -n 1 kubectl get pod -A -o wide'
-c='ctr'
-d='docker'
-i='istioctl'
+..='cd ..'   
+cl='clear'   
+upgrade='sudo apt-get update && sudo apt-get uprade -y'   
+k='kubectl'   
+kp='kubectl get pod -n'   
+kpa='kubectl get pod -A'   
+kpo='kubectl get pod -A -o wide'   
+wkp='watch -n 1 kubectl get pod -A'   
+wkpo='watch -n 1 kubectl get pod -A -o wide'   
+c='ctr'   
+d='docker'   
+i='istioctl'   
 
 
 ## initial_setting.sh demo
-git clone https://github.com/devuk0204/inital
-./initial_setting.sh
-MASTER=FALSE ./initial_setting.sh
-INIT=FALSE ./initial_setting.sh
+git clone https://github.com/devuk0204/inital   
+./initial_setting.sh   
+MASTER=FALSE ./initial_setting.sh   
+INIT=FALSE ./initial_setting.sh    
 INIT=TRUE MULTI=TRUE ./initial_setting.sh
