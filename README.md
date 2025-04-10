@@ -39,6 +39,7 @@ i='istioctl'
 
 ## initial_setting.sh demo
 git clone https://github.com/devuk0204/inital   
+cd initial   
 ./initial_setting.sh   
 MASTER=FALSE ./initial_setting.sh   
 INIT=FALSE ./initial_setting.sh    
