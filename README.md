@@ -13,7 +13,6 @@ IF INIT == TRUE
     MULTI(optional) TRUE|FALSE  default: FALSE   
         - TRUE: If you want to set up the multi-node cluster   
         - FALSE: If you want to setup the single-node cluster   
-
     CNI(optional) flannel|calico|cilium|weave  default:No CNI   
         - option: CNI you want to deploy   
         - flannel: Deploy flannel   
