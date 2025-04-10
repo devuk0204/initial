@@ -9,8 +9,6 @@ if [ "$NAME" != "Ubuntu" ]; then
     exit
 fi
 
-if 
-
 cd ~
 
 echo "##########################################
