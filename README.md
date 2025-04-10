@@ -1,25 +1,25 @@
 # Don't execute free5gc.sh
 
-# initial_setting.sh comand option
-MASTER(optional) TRUE|FALSE  default: TRUE
-    - TRUE: Install docker-ce
-    - FALSE: Don't install docker-ce
+# initial_setting.sh comand option   
+MASTER(optional) TRUE|FALSE  default: TRUE   
+    - TRUE: Install docker-ce   
+    - FALSE: Don't install docker-ce   
 
-INIT(optional) TRUE|FALSE  default: TRUE
-    - TRUE : If the node is master node and init kubeadm automatically
-    - FALSE : If the node is master node and init kubeadm manually
+INIT(optional) TRUE|FALSE  default: TRUE   
+    - TRUE : If the node is master node and init kubeadm automatically   
+    - FALSE : If the node is master node and init kubeadm manually   
 
-IF INIT == TRUE
-    MULTI(optional) TRUE|FALSE  default: FALSE
-        - TRUE: If you want to set up the multi-node cluster
-        - FALSE: If you want to setup the single-node cluster
+IF INIT == TRUE   
+    MULTI(optional) TRUE|FALSE  default: FALSE   
+        - TRUE: If you want to set up the multi-node cluster   
+        - FALSE: If you want to setup the single-node cluster   
 
-    CNI(optional) flannel|calico|cilium|weave  default:No CNI
-        - option: CNI you want to deploy
-        - flannel: Deploy flannel
-        - calico: Deploy calico
-        - cilium: Deploy Cilium
-        - weave: Deploy weave
+    CNI(optional) flannel|calico|cilium|weave  default:No CNI   
+        - option: CNI you want to deploy   
+        - flannel: Deploy flannel   
+        - calico: Deploy calico   
+        - cilium: Deploy Cilium   
+        - weave: Deploy weave   
 
 
 ## custom alias list
