@@ -142,7 +142,7 @@ if [ -z "$MASTER" ]; then
     sudo apt-get -qq -y install docker-ce
     sudo usermod -aG docker $USER
     sudo chmod 666 /var/run/docker.sock
-elif [ "$MASTER" =="TRUE" ]; then
+elif [ "$MASTER" == "TRUE" ]; then
     echo "##########################################
     ##########################################
                 install docker
