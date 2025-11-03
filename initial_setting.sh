@@ -184,7 +184,7 @@ echo "##########################################
         curl -LO https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz
         sudo tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin
         rm cilium-linux-amd64.tar.gz
-        /usr/local/bin/cilium install
+        cilium install
     elif [ "$CNI" == "weave" ]; then
         kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
     fi

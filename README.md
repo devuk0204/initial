@@ -1,5 +1,3 @@
-# Don't execute free5gc.sh
-
 # initial_setting.sh comand option   
 MASTER(optional) TRUE|FALSE  default: TRUE   
     - TRUE: Install docker-ce   
@@ -37,9 +35,9 @@ i='istioctl'
 
 
 ## initial_setting.sh demo
-git clone https://github.com/devuk0204/inital   
-cd initial   
-./initial_setting.sh   
+git clone https://github.com/devuk0204/initial   
+cd initial
+./initial_setting.sh # MASTER, INIT == TRUE & MULTI == FALSE & CNI = no
 MASTER=FALSE ./initial_setting.sh   
 INIT=FALSE ./initial_setting.sh    
 INIT=TRUE MULTI=TRUE ./initial_setting.sh
