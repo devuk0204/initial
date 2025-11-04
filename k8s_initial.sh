@@ -50,7 +50,7 @@ echo "##########################################
 ##########################################
 ##########################################"
 sudo apt-get update 
-sudo apt-get -y upgrade 
+sudo -E apt-get -y upgrade 
 sudo apt-get -y autoremove 
 sudo apt-get autoclean
 
@@ -60,7 +60,7 @@ echo "##########################################
             install net-tools
 ##########################################
 ##########################################"
-sudo apt-get -qq -y install net-tools iproute2 iputils-ping
+sudo -E apt-get -qq -y install net-tools iproute2 iputils-ping
 
 
 echo "##########################################
@@ -68,7 +68,7 @@ echo "##########################################
         install wget & curl & make
 ##########################################
 ##########################################"
-sudo apt-get -qq -y install wget curl make
+sudo -E apt-get -qq -y install wget curl make
 
 
 echo "##########################################
@@ -95,7 +95,7 @@ echo "##########################################
            install containerd
 ##########################################
 ##########################################"
-sudo apt-get -qq -y install ca-certificates gnupg
+sudo -E apt-get -qq -y install ca-certificates gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -104,7 +104,7 @@ echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docke
 
 sudo apt-get -qq update
 
-sudo apt-get -qq -y install containerd.io
+sudo -E apt-get -qq -y install containerd.io
 
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
@@ -122,7 +122,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 
 sudo apt-get -qq update
 
-sudo apt-get install -y kubelet kubeadm kubectl
+sudo -E apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 sudo sysctl -w net.ipv4.ip_forward=1
@@ -142,7 +142,7 @@ if [ -z "$MASTER" ]; then
                 install docker
     ##########################################
     ##########################################"
-    sudo apt-get -qq -y install docker-ce
+    sudo -E apt-get -qq -y install docker-ce
     sudo usermod -aG docker $USER
     sudo chmod 666 /var/run/docker.sock
 elif [ "$MASTER" == "TRUE" ]; then
@@ -151,7 +151,7 @@ elif [ "$MASTER" == "TRUE" ]; then
                 install docker
     ##########################################
     ##########################################"
-    sudo apt-get -qq -y install docker-ce
+    sudo -E apt-get -qq -y install docker-ce
     sudo usermod -aG docker $USER
     sudo chmod 666 /var/run/docker.sock
 else
