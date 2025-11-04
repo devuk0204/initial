@@ -9,6 +9,9 @@ if [ "$NAME" != "Ubuntu" ]; then
     exit
 fi
 
+export DEBIAN_FRONTEND=noninteractive
+export NEEDRESTART_MODE=a
+
 cd ~
 
 echo "##########################################
@@ -92,7 +95,7 @@ echo "##########################################
            install containerd
 ##########################################
 ##########################################"
-sudo apt-get --qq -y install ca-certificates gnupg
+sudo apt-get -qq -y install ca-certificates gnupg
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
