@@ -1,4 +1,4 @@
-# initial_setting.sh comand option   
+# k8s_initial.sh comand option   
 MASTER(optional) TRUE|FALSE  default: TRUE   
     - TRUE: Install docker-ce   
     - FALSE: Don't install docker-ce   
@@ -34,10 +34,10 @@ d='docker'
 i='istioctl'   
 
 
-## initial_setting.sh demo
+## k8s_initial.sh demo
 git clone https://github.com/devuk0204/initial   
 cd initial   
 ./k8s_initial.sh # MASTER, INIT == TRUE & MULTI == FALSE & CNI = no   
-MASTER=FALSE ./initial_setting.sh   
-INIT=FALSE ./initial_setting.sh    
-INIT=TRUE MULTI=TRUE ./initial_setting.sh
+MASTER=FALSE ./k8s_initial.sh   
+INIT=FALSE ./k8s_initial.sh    
+INIT=TRUE MULTI=TRUE ./k8s_initial.sh
